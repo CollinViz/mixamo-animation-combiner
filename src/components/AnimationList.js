@@ -22,7 +22,10 @@ const AnimationList = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      document.querySelectorAll(".collection-item")[4].click();
+      if(document.querySelectorAll(".collection-item") && document.querySelectorAll(".collection-item").length>5 &&document.querySelectorAll(".collection-item")[4].click){
+        document.querySelectorAll(".collection-item")[4].click();
+
+      }
     }, 10000);
   }, []);
 

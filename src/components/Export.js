@@ -38,7 +38,7 @@ const Export = () => {
       function (result) {
         saveArrayBuffer(result, `mixamo-${new Date().getTime()}.glb`);
       },
-      { trs: true, binary: true, animations: animations }
+      { trs: true, binary: true, animations: animations,embedImages:false }
     );
   };
 
@@ -53,7 +53,7 @@ const Export = () => {
         var output = JSON.stringify(result, null, 2);
         saveString(output, `mixamo-${new Date().getTime()}.gltf`);
       },
-      { trs: true, binary: false, animations: animations }
+      { trs: true, binary: false, animations: animations,embedImages:false }
     );
   };
 
